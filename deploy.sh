@@ -1,5 +1,5 @@
 #!/bin/bash
-# docker build -t kostyaurysov/sample-node .
+docker build -t kostyaurysov/sample-node .
 docker push kostyaurysov/sample-node
 
 ssh deploy@35.187.30.81 << EOF
