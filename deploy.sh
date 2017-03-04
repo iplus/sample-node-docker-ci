@@ -1,12 +1,12 @@
 #!/bin/bash
-docker build -t kostyaurysov/sample-node .
-docker push kostyaurysov/sample-node
+# docker build -t kostyaurysov/sample-node .
+# docker push kostyaurysov/sample-node
 
-ssh deploy@35.187.30.81 << EOF
-docker pull kostyaurysov/sample-node:latest
+ssh ivn_plus@104.155.22.214 << EOF
+docker pull ivanplus/sample-node:latest
 docker stop web || true
 docker rm web || true
-docker rmi kostyaurysov/sample-node:current || true
-docker tag kostyaurysov/sample-node:latest kostyaurysov/sample-node:current
-docker run -d --net app --restart always --name web -p 80:80 kostyaurysov/sample-node:current
+docker rmi ivanplus/sample-node:current || true
+docker tag ivanplus/sample-node:latest ivanplus/sample-node:current
+docker run -d --net lab6 --restart always --name web -p 80:80 ivanplus/sample-node:current
 EOF

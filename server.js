@@ -4,9 +4,10 @@ var express = require("express");
 
 express()
  .get("*", function(req, res) {
-    db("users").then(function(data) {
-      res.send(data);
-    });
+     res.send("Continuous integration and deployment lab finished");
+    // db("users").then(function(data) {
+    //   res.send(data);
+    // });
  })
  .listen(80, function(err) {
     if (err) {
