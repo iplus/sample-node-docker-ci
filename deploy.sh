@@ -1,6 +1,6 @@
 #!/bin/bash
 # docker build -t kostyaurysov/sample-node .
-# docker push kostyaurysov/sample-node
+docker push ivanplus/sample-node
 
 ssh ivn_plus@104.155.22.214 << EOF
 docker pull ivanplus/sample-node:latest
