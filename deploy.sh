@@ -2,7 +2,7 @@
 # docker build -t kostyaurysov/sample-node .
 docker push ivanplus/sample-node
 
-ssh ivn.plus@35.187.100.237  << EOF
+ssh ivn_plus@35.187.100.237  << EOF
 docker pull ivanplus/sample-node:latest
 docker stop web || true
 docker rm web || true
